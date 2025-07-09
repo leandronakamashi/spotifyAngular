@@ -4,3 +4,4 @@ dist/
 .DS_Store
 *.log
 .angular/
+src/environments/environment.ts
