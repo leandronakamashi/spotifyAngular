@@ -55,3 +55,19 @@ conteudo {
   padding-left: 100px;
   padding-right: 100px;
 }
+
+@media screen and (max-width: 768px) {
+  .logo {
+    padding: 20px;
+    img {
+      width: 80%;
+    }
+  }
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .playLists {
+    flex-direction: column;
+  }
+}
