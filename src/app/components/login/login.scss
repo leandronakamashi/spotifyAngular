@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+
+.form {
+  padding: 30px;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.botao-login {
+  padding: 20px;
+  background-color: chartreuse;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}

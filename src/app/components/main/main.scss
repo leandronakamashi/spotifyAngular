@@ -1,0 +1,57 @@
+/* Removido grid, voltou ao layout flex padrão */
+.logo {
+  width: 100vw;
+  height: auto;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  img {
+    width: 40%;
+  }
+}
+
+button {
+  background-color: #1db954;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.playLists {
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 20px;
+  gap: 20px;
+}
+
+ol {
+  margin: 0;
+  padding-left: 0;
+  list-style-position: inside;
+  img {
+    width: 50px;
+  }
+}
+
+conteudo {
+  padding: 1px;
+}
+
+.container {
+  padding-left: 100px;
+  padding-right: 100px;
+}

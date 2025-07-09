@@ -1,0 +1,53 @@
+<div class="header">
+  <div class="logo">
+    <img src="/Spotify_Full_Logo_RGB_Green.png" alt="Logo Spotify" />
+  </div>
+</div>
+<div class="container">
+  <app-info-usu [usuario]="usuario"></app-info-usu>
+  <div class="conteudo">
+    <div class="playLists">
+      <div class="top5">
+        <h2>Top 5 Músicas</h2>
+        <ol>
+          @for( musica of top5; let i = $index; track musica){
+          <li>
+            <img src="{{ musica.album.images[0]?.url }}" />
+            {{ musica.name }}
+            <button (click)="tocar(musica.id, 'track')">tocar</button>
+          </li>
+          }
+        </ol>
+      </div>
+      <div class="playList">
+        <h2>Playlists</h2>
+        <ol>
+          @for( playlist of playList; let i = $index; track playlist){
+          <li>
+            <img
+              [src]="
+                playlist.images && playlist.images.length > 0
+                  ? playlist.images[0].url
+                  : ''
+              "
+            />
+            {{ playlist.name }}
+            <button (click)="tocar(playlist.id, 'playlist')">tocar</button>
+          </li>
+          }
+        </ol>
+      </div>
+    </div>
+
+    <iframe
+      title="Spotify Embed: Recommendation Playlist"
+      [src]="iframeSrc | safeUrl"
+      width="100%"
+      height="100%"
+      style="min-height: 360px"
+      frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"
+    ></iframe>
+  </div>
+</div>
