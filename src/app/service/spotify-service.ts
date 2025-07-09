@@ -117,4 +117,12 @@ export class SpotifyService {
     const playlists = await this.spotifyApi.getUserPlaylists();
     return playlists.items;
   }
+
+  async buscarMusicas(query: string): Promise<any[]> {
+    if (!query) return [];
+    const result = await this.spotifyApi.searchTracks(query, { limit: 10 });
+    return result && result.tracks && result.tracks.items
+      ? result.tracks.items
+      : [];
+  }
 }
