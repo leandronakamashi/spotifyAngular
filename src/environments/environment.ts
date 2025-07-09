@@ -6,8 +6,8 @@ export const environment = {
 export const SpotifyConfiguration = {
   clientId: "b1baa09d749e48e0adaac0424dbd9400",
   authEndpoint: "https://accounts.spotify.com/authorize",
-  redirectUrl: "http://127.0.0.1:4200/main",
-  // redirectUrl: "https://spotify-angular-omega.vercel.app/main",
+  // redirectUrl: "http://127.0.0.1:4200/main",
+  redirectUrl: "https://spotify-angular-omega.vercel.app/main",
   scopes: [
     "user-read-currently-playing",
     "user-read-recently-played",
