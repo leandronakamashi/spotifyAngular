@@ -78,7 +78,7 @@ export class SpotifyService {
       client_id: "b1baa09d749e48e0adaac0424dbd9400",
       grant_type: "authorization_code",
       code: code!,
-      redirect_uri: "https://spotify-angular-omega.vercel.app//main",
+      redirect_uri: "https://spotify-angular-omega.vercel.app/main",
       // redirect_uri: 'http://127.0.0.1:4200/main',
       code_verifier: codeVerifier!,
     });
