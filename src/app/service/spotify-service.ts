@@ -38,7 +38,7 @@ export class SpotifyService {
     // const responseType = `response_type=code&show_dialog=true`;
     // return `${authEndponit}${clientId}${redirectUri}${scopes}${responseType}`;
     const clientId = "b1baa09d749e48e0adaac0424dbd9400";
-    const redirectUri = "http://127.0.0.1:4200/main";
+    const redirectUri = SpotifyConfiguration.redirectUrl;
     const codeVerifier = this.gerarCodeVerifier();
     const codeChallenge = await this.gerarCodeChallenge(codeVerifier);
     console.log("codeVerifier:", codeVerifier);
@@ -78,7 +78,7 @@ export class SpotifyService {
       client_id: "b1baa09d749e48e0adaac0424dbd9400",
       grant_type: "authorization_code",
       code: code!,
-      redirect_uri: "https://spotify-angular-omega.vercel.app/main",
+      redirect_uri: SpotifyConfiguration.redirectUrl,
       // redirect_uri: 'http://127.0.0.1:4200/main',
       code_verifier: codeVerifier!,
     });
